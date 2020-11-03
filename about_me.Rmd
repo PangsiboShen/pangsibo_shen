@@ -1,0 +1,12 @@
+---
+title: "ABOUT ME"
+output: 
+  html_document:
+    code_folding: "hide"
+---
+
+![](images/IMG_0778.JPG)  
+
+----------------------------
+
+![](images/resume.jpg)

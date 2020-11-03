@@ -3,11 +3,9 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "About"
+    - text: "ABOUT"
       href: about_me.html
-    - text: "Plotly"
-      href: plotly.html
-    - text: "Dashboard"
+    - text: "DASHBOARD"
       href: dashboard.html
     - icon: fa-envelope fa-lg
       href: mailto:<pangsiboshen0522@gmail.com>
@@ -15,6 +13,8 @@ navbar:
       href: pets.html
     - icon: fa-github fa-lg
       href: https://github.com/PangsiboShen
+    - icon: fab fa-linkedin
+      href: https://www.linkedin.com/in/pangsibo-shen-581353158/
 output:
   html_document:
     theme: lumen
