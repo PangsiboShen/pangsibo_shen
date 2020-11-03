@@ -1,0 +1,18 @@
+---
+title: "WELCOME"
+output: 
+  html_document:
+    toc: false
+    toc_float: false
+---
+ ![](images/IMG_4680.JPG)
+ 
+
+
+## HI. I'M PANGSIBO SHEN !
+
+
+
+Link to the data science course page:
+
+*[P8105](https://p8105.com/index.html)

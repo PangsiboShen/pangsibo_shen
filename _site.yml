@@ -1,0 +1,20 @@
+name: "Yay internet!"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "About"
+      href: about_me.html
+    - text: "Plotly"
+      href: plotly.html
+    - text: "Dashboard"
+      href: dashboard.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<pangsiboshen0522@gmail.com>
+    - icon: fas fa-paw
+      href: pets.html
+    - icon: fa-github fa-lg
+      href: https://github.com/PangsiboShen
+output:
+  html_document:
+    theme: lumen
