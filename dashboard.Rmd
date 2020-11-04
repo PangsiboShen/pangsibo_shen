@@ -1,7 +1,7 @@
 ---
 output: 
   flexdashboard::flex_dashboard:
-    orientation: columns
+    orientation: rows
     vertical_layout: fill
 ---
 
@@ -10,8 +10,10 @@ library(flexdashboard)
 library(tidyverse)
 library(p8105.datasets)
 library(plotly)
-library(shiny)
+library(lubridate)
+library(zoo)
 ```
+
 
 ```{r}
 data("rest_inspec")
@@ -19,34 +21,71 @@ data("rest_inspec")
 tidy_df =
   rest_inspec %>%
   select(
-    boro, cuisine_description, dba, inspection_date, inspection_type, score
+    boro, cuisine_description, score, grade
   ) %>%
-  filter(cuisine_description == c("Italian","Korean","American","Chinese","Japanese","Thai","French","Spanish","Greek","Mexican","Peruvian", "Mediterranean")) %>%
+  filter(cuisine_description == c("Italian","Korean","American","Chinese","Japanese","Thai","French","Spanish","Greek","Mexican","Peruvian", "Mediterranean"),
+         grade == c("A","B","C")) %>%
   drop_na()
 ```
 
 
-Column {data-width=650}
+Row {data-width=350}
 -----------------------------------------------------------------------
 
 ### Chart A
 
 ```{r}
-
+tidy_df %>%
+  plot_ly(y = ~ score, color = ~ cuisine_description, type = "box", colors = "viridis")
 ```
 
-Column {data-width=350}
------------------------------------------------------------------------
+Row {data-width=350}
 
 ### Chart B
 
 ```{r}
-
+tidy_df %>%
+  group_by(boro) %>%
+  count(grade) %>%
+  mutate(grade_perentage =  100*(n/sum(n))) %>%
+  plot_ly(x = ~ boro, y = ~ grade_perentage, color = ~ grade, type = "bar", colors = "viridis")
 ```
+
+
+Row {data-width=350}
+-----------------------------------------------------------------------
 
 ### Chart C
 
 ```{r}
+rest_inspec %>%
+  select(inspection_date, inspection_type) %>%
+  drop_na() %>%
+  filter(inspection_date > "2015-01-01") %>%
+  mutate(year = year(inspection_date),
+         month = month(inspection_date)) %>%
+  group_by(year, month) %>%
+  count() %>%
+  mutate(
+    year_month = paste(year, month, sep = "-"),
+    year_month = as.Date(as.yearmon(year_month))
+         ) %>%
+  ungroup() %>%
+  plot_ly(x = ~ year_month, y = ~ n, type = "scatter",mode = 'lines', colors = "viridis")
+```
 
+
+Row {data-width=350}
+
+### Chart D
+
+```{r}
+rest_inspec %>%
+  select(dba, grade, score) %>%
+  filter(
+    dba == c("DUNKIN DONUTS","STARBUCKS","DOMINO'S","POPEYES LOUISIANA KITCHEN","MCDONALD'S","SUBWAY","	PAPA JOHN'S","SHAKE SHACK","KFC","	CHIPOTLE MEXICAN GRILL")
+  ) %>%
+  drop_na() %>%
+  plot_ly(y = ~ score, color = ~ dba, type = "box", colors = "viridis")
 ```
 
