@@ -14,7 +14,14 @@ output:
 My name is Pangsibo Shen and I'm from Zhejiang Province, China. I graduated from Emory with a BS degree in QSS Major Biology Track and I just started my first year MS Biostatistics program at Mailman School of Public Health in New York City. I'm interested in data analytics and want to work in specific fields such as healthcare and technology. I love traveling and soccer and I'm also a fervent Formula One fan. The photo on the home page was taken at the Cliffs of Moher, Ireland and I was totally shocked by such spectacular view!
 
 
+-------------------------------
 
 Link to my resume:
 
 [Resume](about_me.html)
+
+Link to Problem 2 dashboard:
+
+[Dashboard](dashboard.html)
+
+ ![](images/IMG_4799.JPG)
