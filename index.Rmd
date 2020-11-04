@@ -16,6 +16,8 @@ My name is Pangsibo Shen and I'm from Zhejiang Province, China. I graduated from
 
 -------------------------------
 
+### Links
+
 Link to my resume:
 
 [Resume](about_me.html)
@@ -24,4 +26,11 @@ Link to Problem 2 dashboard:
 
 [Dashboard](dashboard.html)
 
+Link to dashboard dataset:
+ 
+[Dataset](https://p8105.com/dataset_restaurant_inspections.html)
+ 
+------------------------------
+
  ![](images/IMG_4799.JPG)
+ 
