@@ -9,10 +9,10 @@ output:
  
 
 
-## HI. I'M PANGSIBO SHEN !
+## HI. I'M PANG !
 
+My name is Pangsibo Shen and you can call me Pang. I graduated from Emory with a BS degree in QSS Major Biology Track and I just started my first year MS program here at Columbia Public Health in New York City. I'm interested in data analytics and want to work in specific fields such as healthcare and technology. I love traveling and soccer and I'm a fervent Formula One fan!
 
+Link to my resume:
 
-Link to the data science course page:
-
-*[P8105](https://p8105.com/index.html)
+[Resume](about_me.html)
