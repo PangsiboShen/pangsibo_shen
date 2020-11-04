@@ -1,0 +1,52 @@
+---
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+library(shiny)
+```
+
+```{r}
+data("rest_inspec")
+
+tidy_df =
+  rest_inspec %>%
+  select(
+    boro, cuisine_description, dba, inspection_date, inspection_type, score
+  ) %>%
+  filter(cuisine_description == c("Italian","Korean","American","Chinese","Japanese","Thai","French","Spanish","Greek","Mexican","Peruvian", "Mediterranean")) %>%
+  drop_na()
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
+### Chart C
+
+```{r}
+
+```
+
