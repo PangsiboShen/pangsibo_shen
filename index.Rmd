@@ -22,7 +22,7 @@ Link to my resume:
 
 [Resume](about_me.html)
 
-Link to Problem 2 dashboard:
+Link to problem 2 dashboard:
 
 [Dashboard](dashboard.html)
 
